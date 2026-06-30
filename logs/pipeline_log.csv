@@ -1,0 +1,9 @@
+Paso,Acción,Filas,Columnas,Valores faltantes,Observaciones
+1,Estado inicial,8160,8,753,Dataset cargado sin transformaciones.
+2,Eliminación de duplicados,8034,8,753,Se eliminaron 126 registros duplicados.
+3,Conversión de last_login_date,8160,8,769,La columna fue convertida al tipo datetime utilizando errors='coerce'.
+4,Corrección de valores inconsistentes,8160,8,769,Los valores numéricos inválidos fueron reemplazados por NaN.
+5,Normalización de variables categóricas,8160,8,769,"Se unificaron categorías en subscription_plan, country y favorite_genre."
+6,Imputación de monthly_watch_time_mins,8160,8,769,Los valores faltantes fueron imputados utilizando la mediana.
+7,Imputación de favorite_genre,8160,8,769,Los valores faltantes fueron imputados utilizando la moda.
+8,Estado final del Notebook 02,8160,8,769,La variable last_login_date conserva valores NaT por decisión metodológica.
