@@ -306,11 +306,11 @@ st.header("Conclusiones del Análisis Exploratorio")
 # Texto de Conclusiones
 
 st.success("""
-El Análisis Exploratorio de Datos permitió comprender las principales características del conjunto de datos mediante el estudio de la distribución de las variables, la detección de valores atípicos y el análisis de las relaciones entre los distintos atributos.
+El Análisis Exploratorio de Datos permitió comprender en profundidad las características del conjunto de datos mediante el estudio de la distribución de las variables, la identificación de valores atípicos y el análisis de las relaciones existentes entre los distintos atributos.
 
-Las herramientas interactivas incorporadas en esta aplicación facilitan la exploración de cada variable de manera individual y permiten analizar las correlaciones existentes entre ellas, proporcionando una visión más completa de la estructura del dataset.
+Las visualizaciones y herramientas interactivas incorporadas en esta aplicación facilitan la exploración individual de cada variable, el análisis de sus principales estadísticas descriptivas y la interpretación de las correlaciones presentes en el conjunto de datos.
 
-Los resultados obtenidos constituyen la base para la siguiente etapa del proyecto, donde se aplicará el Análisis de Componentes Principales (PCA) con el objetivo de reducir la dimensionalidad, conservar la mayor cantidad posible de información y facilitar la interpretación de los datos.
+Los resultados obtenidos durante esta etapa confirmaron que, luego del proceso de limpieza y preparación, el dataset presenta una estructura consistente y adecuada para la aplicación de técnicas multivariadas. Asimismo, el análisis exploratorio proporcionó la información necesaria para interpretar posteriormente los resultados del Análisis de Componentes Principales (PCA).
 """)
 
 # Transicion hacia PCA
@@ -318,5 +318,5 @@ Los resultados obtenidos constituyen la base para la siguiente etapa del proyect
 st.markdown("""
 ### Próxima etapa
 
-En la siguiente página se presenta el **Análisis de Componentes Principales (PCA)**, donde se estudiará la reducción de dimensionalidad del conjunto de datos y la proporción de información explicada por cada componente principal.
+En la siguiente página se presenta el **Análisis de Componentes Principales (PCA)**, donde se analizará la estructura de las variables numéricas, la proporción de varianza explicada por cada componente principal y la utilidad del PCA como herramienta de exploración y representación del conjunto de datos.
 """)

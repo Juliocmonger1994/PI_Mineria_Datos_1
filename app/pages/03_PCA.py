@@ -23,7 +23,7 @@ st.title("📈 Análisis de Componentes Principales (PCA)")
 st.markdown("""
 En esta sección se presenta el **Análisis de Componentes Principales (PCA)** aplicado al conjunto de datos.
 
-El objetivo es reducir la dimensionalidad del dataset, conservando la mayor cantidad posible de información y facilitando la identificación de patrones entre las variables numéricas.
+El objetivo es estudiar la estructura de las variables numéricas mediante una transformación a un nuevo espacio de componentes principales, evaluando cuánta información puede resumirse en un menor número de dimensiones y facilitando la interpretación de los datos.
 """)
 
 # Carga del Dataset
@@ -130,13 +130,9 @@ componentes_80 = (
 
 st.info(f"""
 Los primeros **{componentes_80} componentes principales**
-explican al menos el **80 %** de la variabilidad del conjunto
-de datos.
+permiten alcanzar al menos el **80 %** de la varianza acumulada.
 
-Esto indica que es posible representar la información
-original utilizando un número menor de variables, reduciendo
-la dimensionalidad sin perder una parte importante de la
-información.
+En este conjunto de datos fue necesario conservar las **tres componentes principales** para representar completamente la información original, por lo que el PCA resultó útil principalmente como herramienta de análisis e interpretación, más que como una técnica de reducción significativa de dimensionalidad.
 """)
 
 # CREAR LA MATRIZ DE LOADINGS
@@ -178,9 +174,9 @@ with col2:
 # Interpretacion
 
 st.info("""
-Las cargas (loadings) indican la contribución de cada variable original en la construcción de los componentes principales.
+Las cargas (loadings) indican cuánto contribuye cada variable original a la formación de cada componente principal.
 
-Las variables con valores absolutos más elevados son las que tienen mayor influencia en cada componente y permiten interpretar qué información resume cada uno de ellos.
+Valores absolutos elevados representan una mayor influencia sobre el componente correspondiente. Este análisis permite interpretar qué información resume cada componente y comprender cómo se distribuye la variabilidad entre las variables originales.
 """)
 
 
@@ -237,8 +233,23 @@ with col2:
 # Interpretación
 
 st.info("""
-La proyección sobre los dos primeros componentes principales permite representar cada observación del conjunto de datos en un espacio bidimensional.
+La proyección sobre los dos primeros componentes principales permite visualizar las observaciones en un espacio bidimensional y explorar la estructura general del conjunto de datos.
 
-Como PC1 y PC2 concentran la mayor parte de la variabilidad del dataset, este gráfico facilita la identificación de patrones generales, agrupamientos y posibles valores atípicos sin necesidad de visualizar todas las variables originales simultáneamente.
+Si bien PC1 y PC2 concentran una proporción importante de la variabilidad, todavía existe información relevante representada por la tercera componente principal. Por este motivo, la proyección constituye una herramienta útil para la exploración visual, aunque no reemplaza completamente la información contenida en las variables originales.
 """)
 
+st.divider()
+
+st.header("Conclusiones del PCA")
+
+st.success("""
+El Análisis de Componentes Principales permitió estudiar la estructura interna de las variables numéricas y analizar cómo se distribuye la variabilidad del conjunto de datos entre las distintas componentes principales.
+
+Los resultados mostraron que ninguna componente domina claramente a las demás, por lo que fue necesario conservar las tres componentes para representar completamente la información disponible. En consecuencia, el PCA resultó especialmente útil como herramienta de exploración e interpretación de los datos, aunque no permitió una reducción significativa de la dimensionalidad.
+""")
+
+st.markdown("""
+### Próxima etapa
+
+En la última sección se presentan las conclusiones generales del proyecto, integrando los resultados obtenidos durante la limpieza de datos, el análisis exploratorio y el Análisis de Componentes Principales.
+""")

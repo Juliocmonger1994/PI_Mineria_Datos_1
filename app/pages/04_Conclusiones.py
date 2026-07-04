@@ -16,9 +16,11 @@ st.title("✅ Conclusiones del Proyecto")
 # Introduccion
 
 st.markdown("""
-Esta sección resume los principales resultados obtenidos durante el desarrollo del Proyecto Integrador de Minería de Datos I.
+Esta sección sintetiza los principales resultados obtenidos durante el desarrollo del Proyecto Integrador de Minería de Datos I.
 
-A partir del proceso de inspección, preparación, análisis exploratorio y reducción de dimensionalidad mediante PCA, fue posible comprender las características del conjunto de datos e identificar los patrones más relevantes para su interpretación.
+A lo largo del proyecto se aplicó un proceso completo de inspección, limpieza, preparación, análisis exploratorio y Análisis de Componentes Principales (PCA), permitiendo transformar un conjunto de datos inicial en un dataset consistente y apto para su análisis.
+
+Las conclusiones presentadas integran los principales hallazgos obtenidos en cada etapa del proyecto y resumen los aportes más relevantes del proceso de minería de datos desarrollado.
 """)
 
 # Carga del Dataset
@@ -69,15 +71,17 @@ st.divider()
 st.header("Principales Hallazgos")
 
 st.success("""
-• Se realizó un proceso completo de inspección y preparación del conjunto de datos.
+• Se realizó un proceso completo de inspección, limpieza y preparación del conjunto de datos, mejorando significativamente su calidad.
 
-• El análisis exploratorio permitió estudiar la distribución de las variables, detectar posibles valores atípicos y analizar las relaciones entre los atributos.
+• Se corrigieron registros duplicados, valores inconsistentes, categorías equivalentes y valores faltantes mediante criterios estadísticos apropiados.
 
-• La matriz de correlación facilitó la identificación de variables relacionadas, aportando evidencia para la aplicación del PCA.
+• El Análisis Exploratorio de Datos permitió comprender la distribución de las variables, identificar valores atípicos plausibles y analizar las relaciones existentes entre los distintos atributos.
 
-• El Análisis de Componentes Principales permitió reducir la dimensionalidad del conjunto de datos conservando una elevada proporción de la variabilidad original.
+• El Análisis de Componentes Principales permitió estudiar la estructura de las variables numéricas y comprender cómo se distribuye la variabilidad del conjunto de datos.
 
-• La aplicación desarrollada integra todas las etapas del proceso de minería de datos mediante una interfaz interactiva que facilita la exploración y comprensión de los resultados.
+• El análisis mostró que fue necesario conservar las tres componentes principales para representar completamente la información disponible, por lo que el PCA resultó especialmente útil como herramienta de exploración e interpretación.
+
+• La aplicación desarrollada en Streamlit integra todas las etapas del proyecto mediante una interfaz interactiva que facilita la exploración y comunicación de los resultados obtenidos.
 """)
 
 # Limitaciones
@@ -87,13 +91,13 @@ st.divider()
 st.header("Limitaciones")
 
 st.warning("""
-• Los resultados obtenidos dependen de la calidad del conjunto de datos analizado.
+• Los resultados obtenidos dependen de la calidad y representatividad del conjunto de datos analizado.
 
-• El PCA considera únicamente relaciones lineales entre las variables numéricas.
+• Algunas variables presentaban valores faltantes e inconsistencias que debieron corregirse durante la etapa de preparación de datos.
 
-• La interpretación de los componentes principales requiere analizar conjuntamente las cargas de las variables originales.
+• El PCA considera únicamente relaciones lineales entre las variables numéricas y su interpretación depende del análisis conjunto de las cargas factoriales.
 
-• Los resultados corresponden exclusivamente al dataset utilizado en este proyecto y no deben generalizarse sin un análisis adicional.
+• Los resultados obtenidos corresponden exclusivamente al conjunto de datos analizado y no deben generalizarse sin una validación adicional sobre nuevos datos.
 """)
 
 # Trabajo Futuro
@@ -105,15 +109,15 @@ st.header("Trabajo Futuro")
 st.info("""
 Como continuación de este proyecto podrían desarrollarse las siguientes líneas de trabajo:
 
-• Incorporar nuevos registros para ampliar el conjunto de datos.
+• Incorporar nuevas variables que permitan caracterizar con mayor profundidad el comportamiento de los usuarios.
 
-• Evaluar otras técnicas de reducción de dimensionalidad.
+• Implementar modelos supervisados de clasificación o regresión utilizando el dataset preparado durante este proyecto.
 
-• Implementar modelos de aprendizaje automático utilizando el dataset procesado.
+• Comparar el PCA con otras técnicas de reducción de dimensionalidad y agrupamiento, como t-SNE, UMAP o algoritmos de clustering.
 
-• Comparar el desempeño de diferentes algoritmos de minería de datos.
+• Ampliar la aplicación desarrollada en Streamlit incorporando nuevas visualizaciones interactivas y métricas descriptivas.
 
-• Desplegar la aplicación utilizando Streamlit Community Cloud para facilitar su acceso.
+• Publicar la aplicación mediante Streamlit Community Cloud para facilitar su acceso y difusión.
 """)
 
 # Conclusion final
@@ -123,9 +127,11 @@ st.divider()
 st.header("Conclusión Final")
 
 st.markdown("""
-El desarrollo de este Proyecto Integrador permitió aplicar de manera práctica las principales etapas del proceso de minería de datos, desde la inspección inicial del conjunto de datos hasta la reducción de dimensionalidad mediante Análisis de Componentes Principales.
+El desarrollo de este Proyecto Integrador permitió aplicar de manera práctica las principales etapas del proceso de minería de datos, desde la inspección inicial del conjunto de datos hasta su preparación, análisis exploratorio y estudio mediante Análisis de Componentes Principales.
 
-La combinación de las notebooks desarrolladas y la aplicación interactiva en Streamlit favorece la reproducibilidad del análisis y la comunicación clara de los resultados, integrando herramientas de programación, análisis estadístico y visualización de datos en un único entorno.
+La calidad del análisis alcanzado fue posible gracias a un proceso sistemático de limpieza y preparación de los datos, que permitió corregir inconsistencias, normalizar variables e imputar valores faltantes utilizando criterios metodológicamente adecuados.
 
-En conjunto, el proyecto constituye una solución completa para la exploración, comprensión e interpretación del conjunto de datos analizado, evidenciando la importancia de un proceso sistemático en la obtención de conocimiento a partir de los datos.
+El Análisis Exploratorio proporcionó una comprensión detallada de la estructura del conjunto de datos, mientras que el PCA permitió estudiar la relación existente entre las variables numéricas y representar la información en un nuevo espacio de componentes principales, favoreciendo su interpretación.
+
+Finalmente, la aplicación desarrollada en Streamlit integra todas las etapas del proyecto en una única interfaz interactiva, facilitando la exploración, visualización y comunicación de los resultados obtenidos. En conjunto, el proyecto evidencia la importancia de una adecuada preparación de los datos como fundamento para obtener análisis confiables y conclusiones consistentes dentro del proceso de minería de datos.
 """)
